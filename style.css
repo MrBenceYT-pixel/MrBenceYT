@@ -1,121 +1,112 @@
+/* stile.stealss - Alap stílusok egy egyszerű weboldalhoz */
+
 body {
-    background: purple;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #222;
 }
 
-.overlay {
-    min-height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
-h1 {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffcc00;
-    text-shadow: 2px 2px 8px #333;
-    letter-spacing: 1px;
+nav {
+  background-color: #34495e;
+  text-align: center;
+  padding: 12px 0;
 }
 
-.content {
-    margin-top: 60px;
-    width: 95%;
-    max-width: 900px;
-    background: rgba(0,0,0,0.25);
-    border-radius: 20px;
-    padding: 40px 20px 20px 20px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 1.05rem;
+  transition: color 0.2s;
 }
 
-.download-section {
-    text-align: center;
-    margin-bottom: 40px;
+nav a:hover {
+  color: #ffd700;
 }
-.download-section h2 {
-    font-size: 1.7rem;
-    margin-bottom: 12px;
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.1);
+  padding: 32px 28px;
 }
-.download-btn {
-    display: inline-block;
-    padding: 12px 36px;
-    background: #ffcc00;
-    color: #222;
-    font-weight: bold;
-    border-radius: 30px;
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+button, .btn {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: #1abc9c;
+}
+
+footer {
+  text-align: center;
+  padding: 18px 0;
+  background-color: #2c3e50;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 0.96rem;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1abc9c;
+}
+
+/* Űrlapok */
+input, textarea, select {
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 12px 5px;
+  }
+  header, footer {
     font-size: 1.2rem;
-    text-decoration: none;
-    margin-top: 8px;
-    transition: background 0.2s, color 0.2s;
-}
-.download-btn:hover {
-    background: #ffd633;
-    color: #111;
-}
-
-.ranks-section {
-    margin-top: 30px;
-}
-.ranks-section h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-.ranks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    justify-content: center;
-}
-.rank-card {
-    background: rgba(255,255,255,0.12);
-    border-radius: 12px;
-    padding: 22px 30px;
-    min-width: 180px;
-    text-align: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-}
-.rank-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #ffcc00;
-}
-.rank-card p {
-    font-size: 1rem;
-    margin-bottom: 14px;
-}
-.rank-card button {
-    background: #ff4c4c;
-    border: none;
-    color: #fff;
-    padding: 9px 22px;
-    border-radius: 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.rank-card button:hover {
-    background: #ff1a1a;
-}
-
-/* Responsive */
-@media (max-width: 700px) {
-    .content {
-        padding: 18px 3vw 15px 3vw;
-    }
-    .ranks {
-        flex-direction: column;
-        gap: 16px;
-    }
+    padding: 12px 0;
+  }
+  nav a {
+    margin: 0 8px;
+    font-size: 0.98rem;
+  }
 }
