@@ -1,116 +1,132 @@
-
-body {
-    font-family: Arial, sans-serif;
-    background: #222;
-    color: #eee;
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
-header {
-    background: #111;
-    padding: 20px 0;
-    text-align: center;
+/* Set the provided image as a full background */
+body {
+    background: url('image3') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Overlay to darken bg and make text visible */
+.overlay {
+    background: rgba(0,0,0,0.50);
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #282828;
-    border-radius: 10px;
-    box-shadow: 0 4px 30px #0008;
-}
-
-.ranks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
-
-.rank-card {
-    background: #333;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #0006;
-    padding: 24px;
-    min-width: 240px;
+    margin-top: 40px;
     text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 8px #333;
+    letter-spacing: 1px;
 }
 
-.rank-card h2 {
-    margin: 0 0 10px 0;
-}
-
-.rank-card .price {
-    font-size: 1.2em;
-    color: #49f87d;
-    margin-bottom: 16px;
-}
-
-.rank-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 16px;
-}
-
-.rank-card li {
-    margin-bottom: 4px;
-}
-
-.rank-card button {
-    background: #49f87d;
-    color: #222;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.rank-card button:hover {
-    background: #36c96a;
+.content {
+    margin-top: 60px;
+    width: 95%;
+    max-width: 900px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 20px;
+    padding: 40px 20px 20px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
 .download-section {
-    margin-top: 40px;
     text-align: center;
+    margin-bottom: 40px;
+}
+.download-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+}
+.download-btn {
+    display: inline-block;
+    padding: 12px 36px;
+    background: #ffcc00;
+    color: #222;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.download-btn:hover {
+    background: #ffd633;
+    color: #111;
 }
 
-.download-section a {
-    display: inline-block;
-    background: #49a1f8;
+.ranks-section {
+    margin-top: 30px;
+}
+.ranks-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.ranks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+.rank-card {
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 22px 30px;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.rank-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ffcc00;
+}
+.rank-card p {
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+.rank-card button {
+    background: #ff4c4c;
+    border: none;
     color: #fff;
-    text-decoration: none;
-    padding: 14px 36px;
-    border-radius: 6px;
-    font-size: 1.2em;
-    margin-top: 10px;
+    padding: 9px 22px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
     transition: background 0.2s;
 }
-
-.download-section a:hover {
-    background: #347bcc;
+.rank-card button:hover {
+    background: #ff1a1a;
 }
 
-.download-section p {
-    color: #aaa;
-    font-size: 0.95em;
-    margin-top: 8px;
-}
-
-@media (max-width: 800px) {
+/* Responsive */
+@media (max-width: 700px) {
+    .content {
+        padding: 18px 3vw 15px 3vw;
+    }
     .ranks {
         flex-direction: column;
-        align-items: center;
-    }
-    .container {
-        padding: 10px;
+        gap: 16px;
     }
 }
