@@ -2,103 +2,134 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>MrBenceYTCraft - Letöltés & Rang vásárlás</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrBenceYT Client - Rangok & Letöltés</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #1e2125;
-            color: #fff;
+            background: #222;
+            color: #eee;
             margin: 0;
             padding: 0;
         }
         header {
-            background: #17191c;
-            padding: 1.5rem;
+            background: #111;
+            padding: 20px 0;
             text-align: center;
         }
         h1 {
             margin: 0;
-            font-size: 2.5rem;
+            letter-spacing: 2px;
         }
         .container {
-            max-width: 600px;
-            margin: 2rem auto;
-            background: #282b30;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 6px 24px #0005;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #282828;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px #0008;
         }
-        .download-section, .ranks-section {
-            margin-bottom: 2rem;
+        .ranks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
         }
-        .btn {
-            background: #ffb100;
-            color: #232323;
-            padding: 1rem 2rem;
-            border: none;
+        .rank-card {
+            background: #333;
             border-radius: 8px;
-            font-size: 1.1rem;
+            box-shadow: 0 2px 8px #0006;
+            padding: 24px;
+            min-width: 240px;
+            text-align: center;
+        }
+        .rank-card h2 {
+            margin: 0 0 10px 0;
+        }
+        .rank-card .price {
+            font-size: 1.2em;
+            color: #49f87d;
+            margin-bottom: 16px;
+        }
+        .rank-card button {
+            background: #49f87d;
+            color: #222;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 1em;
             cursor: pointer;
             transition: background 0.2s;
-            margin-top: 1rem;
         }
-        .btn:hover {
-            background: #ffd966;
+        .rank-card button:hover {
+            background: #36c96a;
         }
-        .ranks-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .download-section {
+            margin-top: 40px;
+            text-align: center;
         }
-        .rank {
-            background: #23272a;
-            border-radius: 8px;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .download-section a {
+            display: inline-block;
+            background: #49a1f8;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            transition: background 0.2s;
         }
-        .rank-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .price {
-            font-size: 1.1rem;
-            color: #ffb100;
+        .download-section a:hover {
+            background: #347bcc;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>MrBenceYTCraft</h1>
-        <p>Letöltés & Rang vásárlás</p>
+        <h1>MrBenceYT Client - Rangvásárlás & Letöltés</h1>
     </header>
     <div class="container">
-        <section class="download-section">
-            <h2>Kliens letöltése</h2>
-            <p>Töltsd le a hivatalos MrBenceYTCraft Minecraft klienst!</p>
-            <a href="letoltes/MrBenceYTCraftClient.zip" class="btn" download>Kliens letöltése</a>
-        </section>
-        <section class="ranks-section">
-            <h2>Rangok vásárlása</h2>
-            <div class="ranks-list">
-                <div class="rank">
-                    <span class="rank-title">VIP</span>
-                    <span class="price">990 Ft</span>
-                    <button class="btn" onclick="alert('A fizetés hamarosan elérhető!')">Vásárlás</button>
+        <section>
+            <h2 style="text-align:center;">Elérhető rangok</h2>
+            <div class="ranks">
+                <div class="rank-card">
+                    <h2>VIP</h2>
+                    <div class="price">1000 Ft</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 16px;">
+                        <li>✔ Különleges tag szín</li>
+                        <li>✔ Extra parancsok</li>
+                        <li>✔ Discord rang</li>
+                    </ul>
+                    <button onclick="alert('A rangvásárlás hamarosan elérhető!')">Vásárlás</button>
                 </div>
-                <div class="rank">
-                    <span class="rank-title">Elite</span>
-                    <span class="price">2490 Ft</span>
-                    <button class="btn" onclick="alert('A fizetés hamarosan elérhető!')">Vásárlás</button>
+                <div class="rank-card">
+                    <h2>Elite</h2>
+                    <div class="price">3000 Ft</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 16px;">
+                        <li>✔ Minden VIP előny</li>
+                        <li>✔ Egyedi skin</li>
+                        <li>✔ Elsőbbségi támogatás</li>
+                    </ul>
+                    <button onclick="alert('A rangvásárlás hamarosan elérhető!')">Vásárlás</button>
                 </div>
-                <div class="rank">
-                    <span class="rank-title">Ultra</span>
-                    <span class="price">4990 Ft</span>
-                    <button class="btn" onclick="alert('A fizetés hamarosan elérhető!')">Vásárlás</button>
+                <div class="rank-card">
+                    <h2>Mester</h2>
+                    <div class="price">5000 Ft</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 16px;">
+                        <li>✔ Minden Elite előny</li>
+                        <li>✔ Személyre szabott rang</li>
+                        <li>✔ Speciális Discord szoba</li>
+                    </ul>
+                    <button onclick="alert('A rangvásárlás hamarosan elérhető!')">Vásárlás</button>
                 </div>
             </div>
+        </section>
+        <section class="download-section">
+            <h2>MrBenceYT Minecraft kliens letöltése</h2>
+            <p>Töltsd le a legújabb Minecraft kliensünket az alábbi gombbal:</p>
+            <a href="letoltes/MrBenceYT_Client.zip" download>Letöltés</a>
+            <p style="color:#aaa; font-size:0.95em; margin-top:8px;">Ha problémád van a letöltéssel, kérjük lépj kapcsolatba az adminisztrátorral.</p>
         </section>
     </div>
 </body>
